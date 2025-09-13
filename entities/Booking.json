@@ -1,0 +1,71 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "client_id": {
+      "type": "string"
+    },
+    "interpreter_id": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "interpretation_type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "client_id",
+    "interpreter_id",
+    "start_date",
+    "end_date"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "client_id": "{{user.id}}"
+        },
+        {
+          "interpreter_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "write": {
+      "$or": [
+        {
+          "client_id": "{{user.id}}"
+        },
+        {
+          "interpreter_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "name": "BookLingo Booking Assistant",
+  "version": "1.0.0",
+  "description": "AI-powered assistant for managing interpreter bookings, matching clients with suitable interpreters, and handling scheduling",
+  "type": "booking_agent",
+  "active": true,
+  
+  "capabilities": {
+    "booking_management": {
+      "create_bookings": true,
+      "modify_bookings": true,
+      "cancel_bookings": true,
+      "view_booking_history": true
+    },
+    "interpreter_matching": {
+      "language_matching": true,
+      "skill_assessment": true,
+      "availability_checking": true,
+      "rating_based_selection": true
+    },
+    "client_services": {
+      "client_onboarding": true,
+      "requirement_analysis": true,
+      "price_estimation": true,
+      "support_chat": true
+    },
+    "scheduling": {
+      "calendar_integration": true,
+      "timezone_handling": true,
+      "conflict_detection": true,
+      "reminder_system": true
+    },
+    "payment_processing": {
+      "invoice_generation": true,
+      "payment_collection": true,
+      "refund_processing": true,
+      "receipt_delivery": true
+    }
+  },
+
+  "supported_languages": [
+    {
+      "language": "English",
+      "code": "en",
+      "proficiency": "native"
+    },
+    {
+      "language": "Spanish",
+      "code": "es", 
+      "proficiency": "fluent"
+    },
+    {
+      "language": "French",
+      "code": "fr",
+      "proficiency": "fluent"
+    },
+    {
+      "language": "German",
+      "code": "de",
+      "proficiency": "conversational"
+    },
+    {
+      "language": "Mandarin Chinese",
+      "code": "zh",
+      "proficiency": "basic"
+    }
+  ],
+
+  "booking_categories": [
+    "legal_court",
+    "medical_appointment",
+    "business_meeting",
+    "conference_event",
+    "educational_tutoring",
+    "government_services",
+    "telephone_interpreting",
+    "video_remote_interpreting"
+  ],
+
+  "settings": {
+    "working_hours": {
+      "start": "08:00",
+      "end": "20:00",
+      "timezone": "UTC-5"
+    },
+    "response_time": {
+      "initial_response": "5 minutes",
+      "booking_confirmation": "15 minutes",
+      "emergency_cases": "2 minutes"
+    },
+    "notification_preferences": {
+      "email_notifications": true,
+      "sms_alerts": true,
+      "push_notifications": false,
+      "voice_calls": true
+    },
+    "auto_confirm_booking": false,
+    "max_bookings_per_day": 50,
+    "emergency_support_available": true
+  },
+
+  "pricing_model": {
+    "base_rate_per_hour": 45.00,
+    "emergency_surcharge": 25.00,
+    "weekend_surcharge": 15.00,
+    "language_premiums": {
+      "common_languages": 0.00,
+      "rare_languages": 20.00,
+      "specialized_terminology": 15.00
+    },
+    "minimum_booking_duration": 1,
+    "currency": "USD"
+  },
+
+  "integration_settings": {
+    "calendar_providers": ["google_calendar", "outlook_calendar", "apple_calendar"],
+    "payment_gateways": ["stripe", "paypal", "bank_transfer"],
+    "communication_channels": ["whatsapp", "sms", "email", "in_app_chat"],
+    "api_version": "v1.2"
+  },
+
+  "security": {
+    "data_encryption": true,
+    "gdpr_compliant": true,
+    "secure_payment_processing": true,
+    "privacy_policy_version": "2.1"
+  },
+
+  "metadata": {
+    "created_date": "2024-01-15",
+    "last_updated": "2024-01-15",
+    "version_notes": "Initial booking assistant configuration",
+    "support_contact": "support@booklingo.com"
+  }
+}
